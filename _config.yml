@@ -1,2 +1,10 @@
 # Build settings 
 include: ["_pages"]
+
+# General Translations
+language: 
+  en: En 
+  fr: Fr
+Tutorial:
+  en: Tutorial
+  fr: Tutoriel
