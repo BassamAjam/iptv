@@ -17,6 +17,15 @@ Tutorials:
 Home:
   en: Home
   fr: Acceuil
+Email:
+  en: Email
+  fr: Courriel
+Address:
+  en: Address
+  fr: Adresse
+Phone:
+  en: Phone
+  fr: Téléphone
 MandatoryField:
   en: Mandatory
   fr: Obligatoire
