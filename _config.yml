@@ -5,9 +5,18 @@ include: ["_pages"]
 language: 
   en: En 
   fr: Fr
+Contact:
+  en: Contact Us
+  fr: Nous-joindre
+Purchases:
+  en: Purchases
+  fr: Achats
+Tutorials:
+  en: Tutorials
+  fr: Tutoriels
+Home:
+  en: Home
+  fr: Acceuil
 MandatoryField:
   en: Mandatory
   fr: Obligatoire
-Tutorial:
-  en: Tutorials
-  fr: Tutoriels
