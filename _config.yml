@@ -5,6 +5,9 @@ include: ["_pages"]
 language: 
   en: En 
   fr: Fr
+MandatoryField:
+  en: Mandatory
+  fr: Obligatoire
 Tutorial:
-  en: Tutorial
-  fr: Tutoriel
+  en: Tutorials
+  fr: Tutoriels
