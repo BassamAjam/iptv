@@ -8,9 +8,15 @@ language:
 Contact:
   en: Contact Us
   fr: Nous-joindre
-Purchases:
-  en: Purchases
-  fr: Achats
+Pricing:
+  en: Pricing
+  fr: Tarification
+FreeTrial:
+  en: Free Trial
+  fr: Essai gratuit
+ChannelList:
+  en: Channel List
+  fr: Listes des chaines
 Tutorials:
   en: Tutorials
   fr: Tutoriels
