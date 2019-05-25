@@ -8,9 +8,9 @@ language:
 Contact:
   en: Contact Us
   fr: Nous-joindre
-Pricing:
-  en: Pricing
-  fr: Tarification
+FullPrice:
+  en: Full Price
+  fr: Prix complet
 FreeTrial:
   en: Free Trial
   fr: Essai gratuit
