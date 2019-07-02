@@ -1,8 +1,19 @@
 
+
+
 <!-- Start Align Area -->
 <section data-form-type="formoid">
     <div class="whole-wrap section-gap">
         <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-30 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Subscription Form</h1>
+                        <p>This form will be helpful to know more information about your requests before <u>contacting you</u> so we can give you better assistance.
+                            You can also visit our page to know what will happen after submitting the form and to know more details about each field.</p>
+                    </div>
+                </div>
+            </div>
             <form action="https://samtelecom.ca/" method="POST" data-form-title="">
                 <div class="row">   
                     <div class="col-lg-8 col-md-8">
@@ -26,25 +37,6 @@
                             <div class="mt-10" data-for="country">
                                 <input type="text" name="country" data-form-field="Country" placeholder="Country" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Country'" required class="single-input">
                             </div>
-                            <!-- <div class="input-group-icon mt-10" data-for="subject">
-                                <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select">
-                                    <select>
-                                        <option value="">Device</option>
-                                        <option value="Mag Box">Mag Box</option>
-                                        <option value="Android Box">Android Box</option>
-                                        <option value="Samsung">Samsung</option>
-                                        <option value="LG">LG</option>
-                                        <option value="Sony">Sony</option>
-                                        <option value="Apple Tv">Apple Tv</option>
-                                        <option value="Apple Phone">Apple Phone</option>
-                                        <option value="Android Phone">Android Phone</option>
-                                        <option value="Fire Stick">Fire Stick</option>
-                                        <option value="windows pc">Windows pc</option>
-                                    </select>
-                                </div>
-                            </div> -->
-
                             <div class="mt-10" data-for="message">
                                 <textarea class="single-textarea" data-form-field="Message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea>
                             </div>
@@ -52,11 +44,11 @@
 
                     <div class="col-lg-3 col-md-4 mt-sm-30">
                         <div class="single-element-widget">
-                            <h3 class="mb-30">Device</h3>
+                            <h3 class="mb-30">Device <span style="color: red; font-size:12px"> (Obligatory)</span></h3>
                             <div class="default-select" id="default-select" data-for="device">
-                                <select data-form-field="Device" required>
-                                    <option value="&nbsp;">&nbsp;</option>
-                                    <option value="Mag Box">Mag Box</option>
+                                <select class="device" data-form-field="Device">
+                                    <option value="">Choose a device..</option>
+                                    <option value="Mag Box" required>Mag Box</option>
                                     <option value="Android Box">Android Box</option>
                                     <option value="Fire Stick">Fire Stick</option>
                                     <option value="windows pc">Microsoft Windows</option>
@@ -78,10 +70,15 @@
                                     <input data-form-field="m3u Link" type="checkbox" id="default-switch">
                                     <label for="default-switch"></label>
                                 </div>
+                                <p>02. Account</p>
+                                <div class="primary-switch" data-for="account">
+                                    <input data-form-field="Account" type="checkbox" id="default-switch">
+                                    <label for="default-switch"></label>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="single-element-widget mt-30">
+                        <div id="macAddress" class="single-element-widget mt-30">
                             <h3 class="mb-10">MAC Address</h3>
                                 <div class="" data-for="macAddress">
                                     <label for="macAddress"></label>
@@ -115,7 +112,7 @@
                 </div> 
             </form>
 
-            {% include aboutSubscriptionForm.html %}
+            <!-- {% include aboutSubscription.html %} -->
         </div>
     </div>
 </section>
