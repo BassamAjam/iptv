@@ -1,5 +1,19 @@
 
 
+{% for post in site.posts %}
+    {{ post }}
+<!-- {% if post.id contains "404" %}{% else %}
+  <url>
+    <loc>{{site.base}}{{ post.url }}</loc>
+    {% assign versions=site.posts | where:"ref", post.ref %}
+    {% for version in versions %}
+      <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+    {% endfor %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+{% endif %} -->
+{% endfor %}
 
 <!-- Start Align Area -->
 <section data-form-type="formoid">
