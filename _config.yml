@@ -1,8 +1,5 @@
-# Build settings 
+# Build settings
 include: ["_pages"]
-
-plugins:
-  - jekyll-sitemap
 
 # General Translations
 language: 
