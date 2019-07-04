@@ -1,20 +1,3 @@
-
-
-{% for post in site.posts %}
-    {{ post }}
-<!-- {% if post.id contains "404" %}{% else %}
-  <url>
-    <loc>{{site.base}}{{ post.url }}</loc>
-    {% assign versions=site.posts | where:"ref", post.ref %}
-    {% for version in versions %}
-      <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
-    {% endfor %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-{% endif %} -->
-{% endfor %}
-
 <!-- Start Align Area -->
 <section data-form-type="formoid">
     <div class="whole-wrap section-gap">
@@ -23,8 +6,8 @@
                 <div class="menu-content pb-30 col-lg-8">
                     <div class="title text-center">
                         <h1 class="mb-10">Subscription Form</h1>
-                        <p>This form will be helpful to know more information about your requests before <u>contacting you</u> so we can give you better assistance.
-                            You can also visit our page to know what will happen after submitting the form and to know more details about each field.</p>
+                        <p>This form will be helpful to know more information about your requests before <b>our support team contact you</b> so they can give you better assistance.
+                            You can also visit our <a href = "./iptv-about-subscription.html">"About Subscription page"</a> that explains the process of getting a subscription.</p>
                     </div>
                 </div>
             </div>
@@ -48,16 +31,38 @@
                             <div class="mt-10" data-for="city">
                                 <input type="text" name="city" data-form-field="City" placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'" required class="single-input">
                             </div>
-                            <div class="mt-10" data-for="country">
-                                <input type="text" name="country" data-form-field="Country" placeholder="Country" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Country'" required class="single-input">
-                            </div>
                             <div class="mt-10" data-for="message">
                                 <textarea class="single-textarea" data-form-field="Message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea>
+                            </div>
+
+                            <h3 class="mb-30 mt-30">Payment Method<span style="color: red; font-size:12px"> (Obligatory)</span></h3>
+                            <div class="input-group-icon mt-10">
+                                <div class="icon"><i class="fa fa-credit-card" aria-hidden="true"></i></div>
+                                <div class="form-select" id="default-select" data-for="paymentMethod">
+                                    <select data-form-field="paymentMethod" required>
+                                        <option value="">Choose a method..</option>
+                                        <option value="Interac e-Transfer">Interac e-Transfer</option>
+                                        <option value="PayPayl">PayPal</option>
+                                    </select>
+                                </div>
                             </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 mt-sm-30">
                         <div class="single-element-widget">
+                            <h3 class="mb-30">Subscription Period</h3>
+                            <div class="default-select" id="default-select" data-for="subscriptionPeriod" style="">
+                                <select data-form-field="Subscription Period">
+                                    <option value="24 Hours">24 Hours (Free Test)</option>
+                                    <option value="3 months">3 months</option>
+                                    <option value="6 months">6 months</option>
+                                    <option value="12 months">12 months</option>
+                                    <option value="24 months">24 months</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="single-element-widget mt-30">
                             <h3 class="mb-30">Device <span style="color: red; font-size:12px"> (Obligatory)</span></h3>
                             <div class="default-select" id="default-select" data-for="device">
                                 <select class="device" data-form-field="Device">
@@ -76,6 +81,14 @@
                             </div>
                         </div>
 
+                        <div id="macAddress" class="single-element-widget mt-30">
+                            <h3 class="mb-10">MAC Address</h3>
+                                <div class="" data-for="macAddress">
+                                    <label for="macAddress"></label>
+                                    <input type="text" name="macAddress" data-form-field="MAC Address" placeholder="00 : 1A : 79 : xx : yy : zz" onfocus="this.placeholder = ''" onblur="this.placeholder = '00 : 1A : 79 : xx : yy : zz'" class="single-input">
+                                </div>
+                        </div>
+
                         <div class="single-element-widget mt-30">
                             <h3 class="mb-30">Streaming Line</h3>
                             <div class="switch-wrap d-flex justify-content-between">
@@ -86,36 +99,13 @@
                                 </div>
                                 <p>02. Account</p>
                                 <div class="primary-switch" data-for="account">
-                                    <input data-form-field="Account" type="checkbox" id="default-switch">
-                                    <label for="default-switch"></label>
+                                    <input data-form-field="Account" type="checkbox" id="primary-switch">
+                                    <label for="primary-switch"></label>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div id="macAddress" class="single-element-widget mt-30">
-                            <h3 class="mb-10">MAC Address</h3>
-                                <div class="" data-for="macAddress">
-                                    <label for="macAddress"></label>
-                                    <input type="text" name="macAddress" data-form-field="MAC Address" placeholder="00 : 1A : 79 : xx : yy : zz" onfocus="this.placeholder = ''" onblur="this.placeholder = '00 : 1A : 79 : xx : yy : zz'" class="single-input">
-                                </div>
-                        </div>
-
-                        <div class="single-element-widget mt-30">
-                            <h3 class="mb-30">Subscription Period</h3>
-                            <div class="default-select" id="default-select" data-for="subscriptionPeriod">
-                                <select data-form-field="Subscription Period">
-                                    <option value="24 Hours">24 Hours (Free Test)</option>
-                                    <option value="3 months">3 months</option>
-                                    <option value="6 months">6 months</option>
-                                    <option value="12 months">12 months</option>
-                                    <option value="24 months">24 months</option>
-                                </select>
                             </div>
                             <button class="primary-btn mt-20" type="submit">Submit Form<span class="lnr lnr-arrow-right"></span></button>
                             <div class="alert-msg"></div>
-                            <br>
                         </div>
-
                     </div>
                 </div>
                 <div class="row">
