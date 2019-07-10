@@ -1,0 +1,49 @@
+
+{% assign category = include.categoryName | strip %}
+
+<button class="collapsible">{{ category }}</button>
+
+{% case category %}
+    {% when 'French' %}
+        <div class="content"> 
+            {% for category in site.data %}
+                {% assign cat = category[1].French %}
+                {% for channels in cat %}
+                    <p>{{ channels }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    
+    {% when 'English' %}
+        <div class="content"> 
+            {% for category in site.data %}
+                {% assign cat = category[1].English %}
+                {% for channels in cat %}
+                        <p>{{ channels }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% when 'Arab' %}
+        <div class="content"> 
+            {% for category in site.data %}
+                {% assign cat = category[1].Arab %}
+                {% for channels in cat %}
+                    <p>{{ channels }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% when 'Turk' %}
+        <div class="content"> 
+            {% for category in site.data %}
+                {% assign cat = category[1].Turk %}
+                {% for channels in cat %}
+                        <p>{{ channels }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% else %}
+        Thank you for your order!
+{% endcase %}
+
+
+
