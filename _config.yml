@@ -2,8 +2,8 @@
 include: ["_pages"]
 
 # General Translations
-language: 
-  en: En 
+language:
+  en: En
   fr: Fr
 Contact:
   en: Contact Us
