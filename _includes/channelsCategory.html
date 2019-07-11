@@ -3,19 +3,19 @@
 <button class="collapsible">{{ category }}</button>
 
 {% case category %}
-    {% when 'French' %}
+    {% when 'France' %}
         <div class="content">
             {% for category in site.data %}
-                {% assign cat = category[1].French %}
+                {% assign cat = category[1].France %}
                 {% for channels in cat %}
-                    <p>{{ channels }}</p>
+                    {{ channels }}<br>
                 {% endfor %}
             {% endfor %}
         </div>
-    {% when 'English' %}
+    {% when 'Albania' %}
         <div class="content">
             {% for category in site.data %}
-                {% assign cat = category[1].English %}
+                {% assign cat = category[1].Albania %}
                 {% for channels in cat %}
                         <p>{{ channels }}</p>
                 {% endfor %}
