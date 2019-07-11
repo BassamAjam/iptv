@@ -8,24 +8,16 @@
                 </div>
             </div>
         </div>
-
-    <div class="row">
-        <div class="col-lg-6">
-            {% for channelsCategories in site.data %}
-                {% assign categories=channelsCategories[1] %}
-                {% for channelsCategory in categories %}
-                    {% capture categoryName %}
-                        {{ channelsCategory[0] }}
-                    {% endcapture %}
-
-                    {% include channelsCategory.html categoryName = categoryName %}
-
+        <div class="row">
+            <div class="col-lg-6">
+                {% for channelsCategories in site.data %}
+                    {% assign categories=channelsCategories[1] %}
+                    {% for channelsCategory in categories %}
+                        {% capture categoryName %} {{ channelsCategory[0] }} {% endcapture %}
+                        {% include channelsCategory.html categoryName = categoryName %}
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
+            </div>
         </div>
     </div>
-
-    </div>
 </section>
-
-           
