@@ -116,7 +116,7 @@ $(document).ready(function(){
   }
   });
 
-
+/*
     $(".skill1").DonutWidget({
 
       // these are default options
@@ -182,7 +182,7 @@ $(document).ready(function(){
         size: "large"
         
       });            
-
+*/
       $(document).ready(function() {
           $('#mc_embed_signup').find('form').ajaxChimp();
       });   
