@@ -2,52 +2,94 @@
 <button class="collapsible">{{ category }}</button>
 
 {% case category %}
-    {% when 'France' %}
-        <div class="content">
-            {% for category in site.data %}
-                {% assign cat = category[1].France %}
-                {% for channels in cat %}
-                    {{ channels }}<br>
-                {% endfor %}
-            {% endfor %}
-        </div>
-    {% when 'Albania' %}
-        <div class="content">
-            {% for category in site.data %}
-                {% assign cat = category[1].Albania %}
-                {% for channels in cat %}
-                        <p>{{ channels }}</p>
-                {% endfor %}
-            {% endfor %}
-        </div>
-    {% when 'Arab' %}
-        <div class="content">
-            {% for category in site.data %}
-                {% assign cat = category[1].Arab %}
-                {% for channels in cat %}
-                    <p>{{ channels }}</p>
-                {% endfor %}
-            {% endfor %}
-        </div>
-    {% when 'Turk' %}
-        <div class="content">
-            {% for category in site.data %}
-                {% assign cat = category[1].Turk %}
-                {% for channels in cat %}
-                        <p>{{ channels }}</p>
-                {% endfor %}
-            {% endfor %}
-        </div>
-    {% else %}
-        <div class="content">
-            {% for category in site.data %}
-                {% assign cat = category[1].Turk %}
-                {% for channels in cat %}
-                        <p>It will be updated in few days!</p>
-                {% endfor %}
-            {% endfor %}
-        </div>
+  {% when 'France' %}<div class="content">{% for channel in site.data.EU-channels.France %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Belgium' %}<div class="content">{% for channel in site.data.EU-channels.Belgium %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Spain' %}<div class="content">{% for channel in site.data.EU-channels.Spain %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Italy' %}<div class="content">{% for channel in site.data.EU-channels.Italy %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Switzerland' %}<div class="content">{% for channel in site.data.EU-channels.Switzerland %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Netherland' %}<div class="content">{% for channel in site.data.EU-channels.Netherland %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'United-kingdom' %}<div class="content">{% for channel in site.data.EU-channels.United-kingdom %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Germany-Austria' %}<div class="content">{% for channel in site.data.EU-channels.Germany-Austria %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Polonia' %}<div class="content">{% for channel in site.data.EU-channels.Polonia %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Armenia' %}<div class="content">{% for channel in site.data.EU-channels.Armenia %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Russian' %}<div class="content">{% for channel in site.data.EU-channels.Russian %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Scandinavian' %}<div class="content">{% for channel in site.data.EU-channels.Scandinavian %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Bulgaria' %}<div class="content">{% for channel in site.data.EU-channels.Bulgaria %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Hungaria' %}<div class="content">{% for channel in site.data.EU-channels.Hungaria %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Romania' %}<div class="content">{% for channel in site.data.EU-channels.Romania %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Yugoslavia' %}<div class="content">{% for channel in site.data.EU-channels.Yugoslavia %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Portugal' %}<div class="content">{% for channel in site.data.EU-channels.Portugal %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Albania' %}<div class="content">{% for channel in site.data.EU-channels.Albania %}{{ channel }}<br>{% endfor %}</div>
+
+  {% when 'Canada-Fr' %}<div class="content">{% for channel in site.data.EU-channels.Canada-Fr %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Canada-En' %}<div class="content">{% for channel in site.data.EU-channels.Canada-En %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'USA' %}<div class="content">{% for channel in site.data.EU-channels.USA %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Latino' %}<div class="content">{% for channel in site.data.EU-channels.Latino %}{{ channel }}<br>{% endfor %}</div>
+
+  {% when 'Maroc' %}<div class="content">{% for channel in site.data.AR-channels.Maroc %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Algeria' %}<div class="content">{% for channel in site.data.AR-channels.Algeria %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Tunisia' %}<div class="content">{% for channel in site.data.AR-channels.Tunisia %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Egypt' %}<div class="content">{% for channel in site.data.AR-channels.Egypt %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Bahrain' %}<div class="content">{% for channel in site.data.AR-channels.Bahrain %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Jordan' %}<div class="content">{% for channel in site.data.AR-channels.Jordan %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Oman' %}<div class="content">{% for channel in site.data.AR-channels.Oman %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Yemen' %}<div class="content">{% for channel in site.data.AR-channels.Yemen %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Mauritania' %}<div class="content">{% for channel in site.data.AR-channels.Mauritania %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Saoudi' %}<div class="content">{% for channel in site.data.AR-channels.Saoudi %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Syria' %}<div class="content">{% for channel in site.data.AR-channels.Syria %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Lebanon' %}<div class="content">{% for channel in site.data.AR-channels.Lebanon %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Palestine' %}<div class="content">{% for channel in site.data.AR-channels.Palestine %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Soudan' %}<div class="content">{% for channel in site.data.AR-channels.Soudan %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Iraq' %}<div class="content">{% for channel in site.data.AR-channels.Iraq %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'United-Arab-Emirates' %}<div class="content">{% for channel in site.data.AR-channels.United-Arab-Emirates %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Libya' %}<div class="content">{% for channel in site.data.AR-channels.Libya %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Qatar' %}<div class="content">{% for channel in site.data.AR-channels.Qatar %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Kuwait' %}<div class="content">{% for channel in site.data.AR-channels.Kuwait %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'BEIN-Sport' %}<div class="content">{% for channel in site.data.AR-channels.BEIN-Sport %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Abu-Dhabi-Sports' %}<div class="content">{% for channel in site.data.AR-channels.Abu-Dhabi-Sports %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Premium' %}<div class="content">{% for channel in site.data.AR-channels.Premium %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'MBC' %}<div class="content">{% for channel in site.data.AR-channels.MBC %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'OSN' %}<div class="content">{% for channel in site.data.AR-channels.OSN %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Islamic' %}<div class="content">{% for channel in site.data.AR-channels.Islamic %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Arabic-Kids' %}<div class="content">{% for channel in site.data.AR-channels.Arabic-Kids %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Arabic-News' %}<div class="content">{% for channel in site.data.AR-channels.Arabic-News %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'ART' %}<div class="content">{% for channel in site.data.AR-channels.ART %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Christian' %}<div class="content">{% for channel in site.data.AR-channels.Christian %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Rotana' %}<div class="content">{% for channel in site.data.AR-channels.Rotana %}{{ channel }}<br>{% endfor %}</div>
+
+  {% when 'Philippines' %}<div class="content">{% for channel in site.data.AS-channels.Philippines %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Tamil' %}<div class="content">{% for channel in site.data.AS-channels.Tamil %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'India' %}<div class="content">{% for channel in site.data.AS-channels.India %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Pakistan' %}<div class="content">{% for channel in site.data.AS-channels.Pakistan %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Persian' %}<div class="content">{% for channel in site.data.AS-channels.Persian %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Afghan' %}<div class="content">{% for channel in site.data.AS-channels.Afghan %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Turkish' %}<div class="content">{% for channel in site.data.AS-channels.Turkish %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Kurdistan' %}<div class="content">{% for channel in site.data.AS-channels.Kurdistan %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Malayalam' %}<div class="content">{% for channel in site.data.AS-channels.Malayalam %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Marathi' %}<div class="content">{% for channel in site.data.AS-channels.Marathi %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Bhojpuri' %}<div class="content">{% for channel in site.data.AS-channels.Bhojpuri %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Telegu' %}<div class="content">{% for channel in site.data.AS-channels.Telegu %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Gujarati' %}<div class="content">{% for channel in site.data.AS-channels.Gujarati %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Bengali' %}<div class="content">{% for channel in site.data.AS-channels.Bengali %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Kannada' %}<div class="content">{% for channel in site.data.AS-channels.Kannada %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Punjabi' %}<div class="content">{% for channel in site.data.AS-channels.Punjabi %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Hebrew' %}<div class="content">{% for channel in site.data.AS-channels.Hebrew %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Australia' %}<div class="content">{% for channel in site.data.AS-channels.Australia %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'English' %}<div class="content">{% for channel in site.data.AS-channels.English %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Sports' %}<div class="content">{% for channel in site.data.AS-channels.Sports %}{{ channel }}<br>{% endfor %}</div>
+  {% when 'Sub-Saharan' %}<div class="content">{% for channel in site.data.AS-channels.Sub-Saharan %}{{ channel }}<br>{% endfor %}</div>
+
 {% endcase %}
+
+{%- comment -%}
+  {% for category in site.data %}
+    {% assign cat = category[1].Turk %}
+    {% for channels in cat %}
+        <p>{{ channels }}</p>
+    {% endfor %}
+  {% endfor %}
+{%- endcomment -%}
+
 
 
 
