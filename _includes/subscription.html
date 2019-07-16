@@ -1,123 +1,140 @@
 <section data-form-type="formoid">
-    <div class="whole-wrap section-gap">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="menu-content pb-30 col-lg-8">
-                    <div class="title text-center">
-                        <h1 class="mb-10">IPTV Subscription Form</h1>
-                        <p>
-                            Help us to better understand your request by filling out this form, so our <b>support team</b> can give you the best assistance once they contact you.<br>
-                            You can also visit our <a href = "./iptv-about-subscription.html">"About Subscription page"</a> for information on how to subscribe.<br>
-                            We always recommend our customers to check out the <a href="./iptv-tutorials.html">"tutorial"</a> of the device they have.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <form action="https://samtelecom.ca/" method="POST" data-form-title="">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8">
-                        <h3 class="mb-30">Personal information</h3>
-                            <input type="hidden" name="email" data-form-email="true" value="TfbhKf9UW/siCyEtIJlFXhzE1sVWKnzkSb2564QemM5L+SZCq3LJ6WvjQyTE/g/7U3l9/Pkul3/oVCzY86IJ6Z2YYIMQUPdpYvKjJMf4Cuf3kBTCTpvK5EC2E0rMBalR">
-                            <div class="mt-10" data-for="firstName">
-                                <input id="customerName" type="text" name="firstName" data-form-field="First Name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
-                            </div>
-                            <div class="mt-10" data-for="lastName">
-                                <input type="text" name="lastName" data-form-field="Last Name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
-                            </div>
-                            <div class="mt-10" data-for="emailAddress">
-                                <input type="email" name="emailAddress" data-form-field="Email address" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required class="single-input">
-                            </div>
-                            <div class="mt-10" data-for="phone">
-                                <input type="text" name="phone" data-form-field="Phone" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" class="single-input">
-                            </div>
-                            <div class="mt-10" data-for="city">
-                                <input type="text" name="city" data-form-field="City" placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'" required class="single-input">
-                            </div>
-                            <div class="mt-10" data-for="message">
-                                <textarea class="single-textarea" data-form-field="Message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea>
-                            </div>
-                            <h3 class="mb-30 mt-30">Payment Method <span><a href="./iptv-about-subscription.html"><i style="color : black; " class="fa fa-info-circle"></i></a></span></h3>
-                            <div class="input-group-icon mt-10 mb-30">
-                                <div class="icon"><i class="fa fa-credit-card" aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select" data-for="paymentMethod">
-                                    <select data-form-field="paymentMethod">
-                                        <option value="">Choose a method..</option>
-                                        <option value="Interac e-Transfer">Interac e-Transfer</option>
-                                        <option value="PayPayl">PayPal</option>
-                                    </select>
-                                </div>
-                            </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 mt-sm-30">
-                        <div class="single-element-widget">
-                            <h3 class="mb-30">Subscription Period</h3>
-                            <div class="default-select" id="default-select" data-for="subscriptionPeriod">
-                                <select data-form-field="Subscription Period">
-                                    <option value="24 Hours">24 Hours (Free Test)</option>
-                                    <option value="3 months">3 months</option>
-                                    <option value="6 months">6 months</option>
-                                    <option value="12 months">12 months</option>
-                                    <option value="24 months">24 months</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="single-element-widget mt-30">
-                            <h3 class="mb-30">Device <span style="color: red; font-size:12px"> (Obligatory)</span></h3>
-                            <div class="default-select" id="default-select" data-for="device">
-                                <select class="device" data-form-field="Device">
-                                    <option value="">Choose a device..</option>
-                                    <option value="Mag Box" required>Mag Box</option>
-                                    <option value="Android Box">Android Box</option>
-                                    <option value="Fire Stick">Fire Stick</option>
-                                    <option value="windows pc">Microsoft Windows</option>
-                                    <option value="Samsung TV">Samsung TV</option>
-                                    <option value="LG TV">LG TV</option>
-                                    <option value="Buzz Box">Buzz Box</option>
-                                    <option value="Android Devices">Android Devices</option>
-                                    <option value="Apple Tv">Apple Tv</option>
-                                    <option value="Apple Devices">Apple Devices</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div id="macAddress" class="single-element-widget mt-30">
-                            <h3 class="mb-10">MAC Address</h3>
-                                <div class="" data-for="macAddress">
-                                    <label for="macAddress"></label>
-                                    <input type="text" name="macAddress" data-form-field="MAC Address" placeholder="00 : 1A : 79 : xx : yy : zz" onfocus="this.placeholder = ''" onblur="this.placeholder = '00 : 1A : 79 : xx : yy : zz'" class="single-input">
-                                </div>
-                        </div>
-
-                        <div class="single-element-widget mt-30">
-                            <h3 class="mb-30">Streaming Line</h3>
-                            <div class="switch-wrap d-flex justify-content-between">
-                                <p>01. m3u URL</p>
-                                <div class="primary-switch" data-for="m3uURL">
-                                    <input data-form-field="m3u Url" type="checkbox" id="default-switch">
-                                    <label for="default-switch"></label>
-                                </div>
-                            <div class="switch-wrap d-flex justify-content-between">
-                                <p>02. Xtream Code API Account</p>
-                                <div class="primary-switch" data-for="account">
-                                    <input data-form-field="Account" type="checkbox" id="primary-switch">
-                                    <label for="primary-switch"></label>
-                                </div>
-                            </div>
-                            </div>
-                            <button class="primary-btn mt-20" type="submit">Submit Form<span class="lnr lnr-arrow-right"></span></button>
-                            <div class="alert-msg"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12"  >
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success mt-10">Form submitted successfully. Thank you! We will contact you in 24 hours!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger"></div>
-                    </div>
-                </div>
-            </form>
+  <div class="whole-wrap section-gap">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="menu-content pb-30 col-lg-8">
+          <div class="title text-center">
+            <h1 class="mb-10">IPTV Subscription Form</h1>
+            <p>
+              Help us to better understand your request by filling out this form, so our <b>support team</b> can give
+              you the best assistance once they contact you.<br>
+              You can also visit our <a href="./iptv-about-subscription.html">"About Subscription page"</a> for
+              information on how to subscribe.<br>
+              We always recommend our customers to check out the <a href="./iptv-tutorials.html">"tutorial"</a> of the
+              device they have.
+            </p>
+          </div>
         </div>
+      </div>
+      <form action="https://samtelecom.ca/" method="POST" data-form-title="">
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <h3 class="mb-30">Personal information</h3>
+            <input type="hidden" name="email" data-form-email="true"
+              value="TfbhKf9UW/siCyEtIJlFXhzE1sVWKnzkSb2564QemM5L+SZCq3LJ6WvjQyTE/g/7U3l9/Pkul3/oVCzY86IJ6Z2YYIMQUPdpYvKjJMf4Cuf3kBTCTpvK5EC2E0rMBalR">
+            <div class="mt-10" data-for="firstName">
+              <input id="customerName" type="text" name="firstName" data-form-field="First Name"
+                placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'"
+                required class="single-input">
+            </div>
+            <div class="mt-10" data-for="lastName">
+              <input type="text" name="lastName" data-form-field="Last Name" placeholder="Last Name"
+                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+            </div>
+            <div class="mt-10" data-for="emailAddress">
+              <input type="email" name="emailAddress" data-form-field="Email address" placeholder="Email address"
+                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
+                class="single-input">
+            </div>
+            <div class="mt-10" data-for="phone">
+              <input type="text" name="phone" data-form-field="Phone" placeholder="Phone"
+                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" class="single-input">
+            </div>
+            <div class="mt-10" data-for="city">
+              <input type="text" name="city" data-form-field="City" placeholder="City" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'City'" required class="single-input">
+            </div>
+            <div class="mt-10" data-for="message">
+              <textarea class="single-textarea" data-form-field="Message" placeholder="Message"
+                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea>
+            </div>
+            <h3 class="mb-30 mt-30">Payment Method <span><a href="./iptv-about-subscription.html" target="_blank"><i
+                    style="color : black; " class="fa fa-info-circle"></i></a></span></h3>
+            <div class="input-group-icon mt-10 mb-30">
+              <div class="icon"><i class="fa fa-credit-card" aria-hidden="true"></i></div>
+              <div class="form-select" id="default-select" data-for="paymentMethod">
+                <select data-form-field="paymentMethod">
+                  <option value="">Choose a method..</option>
+                  <option value="Interac e-Transfer">Interac e-Transfer</option>
+                  <option value="PayPayl">PayPal</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mt-sm-30">
+            <div class="single-element-widget">
+              <h3 class="mb-30">Subscription Period</h3>
+              <div class="default-select" id="default-select" data-for="subscriptionPeriod">
+                <select data-form-field="Subscription Period">
+                  <option value="24 Hours">24 Hours (Free Test)</option>
+                  <option value="3 months">3 months</option>
+                  <option value="6 months">6 months</option>
+                  <option value="12 months">12 months</option>
+                  <option value="24 months">24 months</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="single-element-widget mt-30">
+              <h3 class="mb-30">Device <span style="color: red; font-size:12px"> (Obligatory)</span></h3>
+              <div class="default-select" id="default-select" data-for="device">
+                <select class="device" data-form-field="Device">
+                  <option value="">Choose a device..</option>
+                  <option value="Mag Box" required>Mag Box</option>
+                  <option value="Android Box">Android Box</option>
+                  <option value="Fire Stick">Fire Stick</option>
+                  <option value="windows pc">Microsoft Windows</option>
+                  <option value="Samsung TV">Samsung TV</option>
+                  <option value="LG TV">LG TV</option>
+                  <option value="Buzz Box">Buzz Box</option>
+                  <option value="Android Devices">Android Devices</option>
+                  <option value="Apple Tv">Apple Tv</option>
+                  <option value="Apple Devices">Apple Devices</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="macAddress" class="single-element-widget mt-30">
+              <h3 class="mb-10">MAC Address</h3>
+              <div class="" data-for="macAddress">
+                <label for="macAddress"></label>
+                <input type="text" name="macAddress" data-form-field="MAC Address"
+                  placeholder="00 : 1A : 79 : xx : yy : zz" onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = '00 : 1A : 79 : xx : yy : zz'" class="single-input">
+              </div>
+            </div>
+
+            <div class="single-element-widget mt-30">
+              <h3 class="mb-30">Streaming Line</h3>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>01. m3u URL</p>
+                <div class="primary-switch" data-for="m3uURL">
+                  <input data-form-field="m3u Url" type="checkbox" id="default-switch">
+                  <label for="default-switch"></label>
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                  <p>02. Xtream Code API Account</p>
+                  <div class="primary-switch" data-for="account">
+                    <input data-form-field="Account" type="checkbox" id="primary-switch">
+                    <label for="primary-switch"></label>
+                  </div>
+                </div>
+              </div>
+              <button class="primary-btn mt-20" type="submit">Submit Form<span
+                  class="lnr lnr-arrow-right"></span></button>
+              <div class="alert-msg"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div hidden="hidden" data-form-alert="" class="alert alert-success mt-10">Form submitted successfully. Thank
+              you! We will contact you in 24 hours!</div>
+            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger"></div>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
 </section>

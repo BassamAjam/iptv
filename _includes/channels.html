@@ -1,52 +1,52 @@
 <section class="contact-area section-gap">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-30 col-lg-8">
-                <div class="title text-center">
-                    <h1 class="mb-10">Channels list</h1>
-                    <p>List of countries, languages and satellites covered by our server with theirs channels.</p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-30 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Channels list</h1>
+          <p>List of countries, languages and satellites covered by our server with theirs channels.</p>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <h2 class="mb-15 mt-15">North America countries</h2>
-                {% for channelsCategories in site.data.NA-channels %}
-                    {% assign categories=channelsCategories[0] %}
-                    {% for channelsCategory in categories %}
-                        {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
-                        {% include channelsCategory.html categoryName = categoryName %}
-                    {% endfor %}
-                {% endfor %}
-                <h2 class="mb-15 mt-15">European United countries</h2>
-                {% for channelsCategories in site.data.EU-channels %}
-                    {% assign categories=channelsCategories[0] %}
-                    {% for channelsCategory in categories %}
-                        {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
-                        {% include channelsCategory.html categoryName = categoryName %}
-                    {% endfor %}
-                {% endfor %}
-            </div>
-            <div class="col-lg-4">
-                <h2 class="mb-15 mt-15">Arab countries and satellites</h2>
-                {% for channelsCategories in site.data.AR-channels %}
-                    {% assign categories=channelsCategories[0] %}
-                    {% for channelsCategory in categories %}
-                        {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
-                        {% include channelsCategory.html categoryName = categoryName %}
-                    {% endfor %}
-                {% endfor %}
-            </div>
-            <div class="col-lg-4">
-                <h2 class="mb-15 mt-15">Asian Countries and languages</h2>
-                {% for channelsCategories in site.data.AS-channels %}
-                    {% assign categories=channelsCategories[0] %}
-                    {% for channelsCategory in categories %}
-                        {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
-                        {% include channelsCategory.html categoryName = categoryName %}
-                    {% endfor %}
-                {% endfor %}
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <h2 class="mb-15 mt-15">North America countries</h2>
+        {% for channelsCategories in site.data.NA-channels %}
+          {% assign categories=channelsCategories[0] %}
+          {% for channelsCategory in categories %}
+            {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
+            {% include channelsCategory.html categoryName = categoryName %}
+          {% endfor %}
+        {% endfor %}
+        <h2 class="mb-15 mt-15">European United countries</h2>
+        {% for channelsCategories in site.data.EU-channels %}
+          {% assign categories=channelsCategories[0] %}
+          {% for channelsCategory in categories %}
+            {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
+            {% include channelsCategory.html categoryName = categoryName %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+      <div class="col-lg-4">
+        <h2 class="mb-15 mt-15">Arab countries and satellites</h2>
+        {% for channelsCategories in site.data.AR-channels %}
+          {% assign categories=channelsCategories[0] %}
+          {% for channelsCategory in categories %}
+            {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
+            {% include channelsCategory.html categoryName = categoryName %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+      <div class="col-lg-4">
+        <h2 class="mb-15 mt-15">Asian Countries and languages</h2>
+        {% for channelsCategories in site.data.AS-channels %}
+          {% assign categories=channelsCategories[0] %}
+          {% for channelsCategory in categories %}
+            {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
+            {% include channelsCategory.html categoryName = categoryName %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>
