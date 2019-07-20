@@ -46,6 +46,14 @@
             {% include channelsCategory.html categoryName = categoryName %}
           {% endfor %}
         {% endfor %}
+        <h2 class="mb-15 mt-15">Sub-Saharan Africa</h2>
+        {% for channelsCategories in site.data.AF-channels %}
+          {% assign categories=channelsCategories[0] %}
+          {% for channelsCategory in categories %}
+            {% capture categoryName %} {{ channelsCategory }} {% endcapture %}
+            {% include channelsCategory.html categoryName = categoryName %}
+          {% endfor %}
+        {% endfor %}
       </div>
     </div>
   </div>
