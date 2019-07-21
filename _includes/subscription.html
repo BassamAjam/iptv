@@ -8,16 +8,16 @@
             <p>
               Help us to better understand your request by filling out this form. Our <b>support team</b> will give
               you the best assistance once they contact you.<br>
-              You can also visit our <a href="./iptv-about-subscription.html">About Subscription page</a> for
+              You can also visit our <a href="./iptv-about-subscription" target="_blank">About Subscription page</a> for
               information on how to subscribe.<br>
-              We recommend you to check out the <a href="./iptv-configurations.html">configurations page</a>to know how to configure your device.
+              We recommend you to check out the <a href="./iptv-configurations" target="_blank">configurations page</a>to know how to configure your device.
             </p>
           </div>
         </div>
       </div>
       <form action="https://samtelecom.ca/" method="POST" data-form-title="">
         <div class="row">
-          <div class="col-lg-8 col-md-8">
+          <div class="col-lg-7 col-md-7">
             <h3 class="mb-30">Personal information</h3>
             <input type="hidden" name="email" data-form-email="true"
               value="TfbhKf9UW/siCyEtIJlFXhzE1sVWKnzkSb2564QemM5L+SZCq3LJ6WvjQyTE/g/7U3l9/Pkul3/oVCzY86IJ6Z2YYIMQUPdpYvKjJMf4Cuf3kBTCTpvK5EC2E0rMBalR">
@@ -43,25 +43,31 @@
               <input type="text" name="city" data-form-field="City" placeholder="City" onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'City'" required class="single-input">
             </div>
+            <div class="input-group-icon mt-10 mb-30">
+              <div class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+              <div class="form-select" id="default-select" data-for="hearAboutUs">
+                <select class="hearAboutUs" data-form-field="Hear-About-Us">
+                  <option value="">How did you hear about us?</option>
+                  <option value="Friends">Friends</option>
+                  <option value="Kijiji">Kijiji</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Google Search">Google Search</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <!-- <div class="Hear-About-Us-Other">
+              <div data-for="hearAboutUsOther">
+                <input type="text" name="Hear-About-Us-Other" data-form-field="Hear-About-Us-Other" class="single-input">
+              </div>
+            </div> -->
             <div class="mt-10" data-for="message">
               <textarea class="single-textarea" data-form-field="Message" placeholder="Message"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea>
             </div>
-            <h3 class="mb-30 mt-30">Payment Method <span><a href="./iptv-about-subscription.html" target="_blank"><i
-                    style="color : black; " class="fa fa-info-circle" title="About payment method"></i></a></span></h3>
-            <div class="input-group-icon mt-10 mb-30">
-              <div class="icon"><i class="fa fa-credit-card" aria-hidden="true"></i></div>
-              <div class="form-select" id="default-select" data-for="paymentMethod">
-                <select data-form-field="paymentMethod">
-                  <option value="">Choose a method..</option>
-                  <option value="Interac e-Transfer">Interac e-Transfer</option>
-                  <option value="PayPayl">PayPal</option>
-                </select>
-              </div>
-            </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 mt-sm-30">
+          <div class="col-lg-4 col-md-5 mt-sm-30">
             <div class="single-element-widget">
               <h3 class="mb-30">Subscription Period</h3>
               <div class="default-select" id="default-select" data-for="subscriptionPeriod">
@@ -74,65 +80,46 @@
                 </select>
               </div>
             </div>
-
             <div class="single-element-widget mt-30">
               <h3 class="mb-30">Device <span style="color: red; font-size:12px"> (Obligatory)</span></h3>
               <div class="default-select" id="default-select" data-for="device">
                 <select class="device" data-form-field="Device">
                   <option value="">Choose a device..</option>
-                  <option value="Mag Box" required>Mag Box</option>
-                  <option value="Android Box">Android Box</option>
-                  <option value="Fire Stick">Fire Stick</option>
-                  <option value="windows pc">Microsoft Windows</option>
-                  <option value="Samsung TV">Samsung TV</option>
-                  <option value="LG TV">LG TV</option>
-                  <option value="Buzz Box">Buzz Box</option>
-                  <option value="Android Devices">Android Devices</option>
-                  <option value="Apple Tv">Apple Tv</option>
-                  <option value="Apple Devices">Apple Devices</option>
+                  {% for device in site.data.Devices.Types %}
+                    <option value="{{ device }}"> {{ device }}</option>
+                  {% endfor %}
                 </select>
               </div>
             </div>
-
-            <div id="macAddress" class="single-element-widget mt-30">
-              <h3 class="mb-10">MAC Address</h3>
-              <div class="" data-for="macAddress">
-                <label for="macAddress"></label>
-                <input type="text" name="macAddress" data-form-field="MAC Address"
-                  placeholder="aa : bb : cc : xx : yy : zz" onfocus="this.placeholder = ''"
-                  onblur="this.placeholder = 'aa : bb : cc : xx : yy : zz'" class="single-input">
-              </div>
-            </div>
-
+            <div id="mac-m3u" class="single-element-widget mt-30"></div>
             <div class="single-element-widget mt-30">
-              <h3 class="mb-30">Streaming Line</h3>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>01. m3u URL</p>
-                <div class="primary-switch" data-for="m3uURL">
-                  <input data-form-field="m3u Url" type="checkbox" id="default-switch">
-                  <label for="default-switch"></label>
-                </div>
-                <div class="switch-wrap d-flex justify-content-between">
-                  <p>02. Xtream Code API Account</p>
-                  <div class="primary-switch" data-for="account">
-                    <input data-form-field="Account" type="checkbox" id="primary-switch">
-                    <label for="primary-switch"></label>
-                  </div>
+              <h3 class="mb-30 mt-30">Payment Method <span><a href="./iptv-about-subscription" target="_blank"><i
+                style="color : black; " class="fa fa-info-circle" title="About payment method"></i></a></span></h3>
+              <div class="input-group-icon mt-10 mb-30">
+                <div class="default-select" id="default-select" data-for="paymentMethod">
+                  <select data-form-field="Payment Method">
+                    <option value="">Choose a method..</option>
+                    <option value="Interac e-Transfer">Interac e-Transfer</option>
+                    <option value="PayPayl">PayPal</option>
+                  </select>
                 </div>
               </div>
-              <button class="primary-btn mt-20" type="submit">Submit Form<span
-                  class="lnr lnr-arrow-right"></span></button>
-              <div class="alert-msg"></div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-12 col-md-12">
-            <div hidden="hidden" data-form-alert="" class="alert alert-success mt-10">Form submitted successfully. Thank
-              you! We will contact you in 24 hours!</div>
-            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger"></div>
-          </div>
+          <div class="col-lg-7 col-md-7">
+            <div class="single-element-widget">
+                <div hidden="hidden" data-form-alert="" class="alert alert-success mt-10">Form submitted successfully. Thank
+                    you! We will contact you within 24 hours!</div>
+                  <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger">Form submitted failed!</div>
+              <button class="primary-btn mt-20" type="submit">Submit Form<span
+                  class="lnr lnr-arrow-right"></span></button>
+              <div class="alert-msg"></div>
+
+            </div>
         </div>
+
       </form>
     </div>
   </div>
