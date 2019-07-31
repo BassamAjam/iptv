@@ -9,15 +9,27 @@
         <ul class="list" style="  background-image: -moz-linear-gradient(90deg, #f45622 0%, #f53e54 100%);
                 background-image: -webkit-linear-gradient(90deg, #f45622 0%, #f53e54 100%);
                 background-image: -ms-linear-gradient(90deg, #f45622 0%, #f53e54 100%);">
-          <li><a href="./iptv-subscription" target="_blank">Get Your Free Trial</a></li>
+          <li>
+            {% if page.lang == "en" %}
+              <a href="./iptv-subscription" target="_blank">Get Your Free Trial</a>
+            {% else %}
+              <a href="./iptv-abonnement" target="_blank">Obtenez votre essai gratuit</a>
+            {% endif %}
+          </li>
         </ul>
       </div>
     </div>
   </div>
   <nav class="navbar navbar-expand-lg  navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="iptv-home"><img src="../assets/img/samtelecom-full-logo.png" alt="SamTelecom - IPTV Subscription" title = "SamTelecom - IPTV Subscription"
+      {% if page.lang == "en" %}
+        <a class="navbar-brand" href="iptv-home"><img src="../assets/img/samtelecom-full-logo.png" alt="SamTelecom - IPTV Subscription" title = "SamTelecom - IPTV Subscription"
           alt="IPTV Subscription Canada"></a>
+      {% else %}
+        <a class="navbar-brand" href="iptv-accueil"><img src="../assets/img/samtelecom-full-logo.png" alt="SamTelecom - Abonnement IPTV" title = "SamTelecom - Abonnement IPTV"
+          alt="Abonnement IPTV Canada"></a>
+      {% endif %}
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,20 +37,46 @@
 
       <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li><a href="./iptv-home">Home</a></li>
-          <li><a href="./iptv-subscription">Subscription</a></li>
-          <!-- <li><a href="./iptv-prices">Prices</a></li> -->
-          <li><a href="./iptv-about-subscription">about Subscription</a></li>
-          <!-- Dropdown -->
-          <li class="dropdown">
-            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Services</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="./iptv-amazon-devices">Buy IPTV Device</a>
-              <a class="dropdown-item" href="./iptv-configurations">Configurations</a>
-              <a class="dropdown-item" href="./iptv-channels">Channels</a>
-            </div>
-          </li>
-          <li><a href="./iptv-contact-us">Contact Us</a></li>
+          {% if page.lang == "en" %}
+
+            <li><a href="./iptv-home">Home</a></li>
+            <li><a href="./iptv-subscription">Subscription</a></li>
+            <li><a href="./iptv-about-subscription">about Subscription</a></li>
+            <!-- Dropdown -->
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Services</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="./iptv-amazon-devices">Buy IPTV Device</a>
+                <a class="dropdown-item" href="./iptv-configurations">Configurations</a>
+                <a class="dropdown-item" href="./iptv-channels">Channels</a>
+              </div>
+            </li>
+            <li><a href="./iptv-contact-us">Contact Us</a></li>
+
+          {% else %}
+            <li><a href="./iptv-accueil">Accueil</a></li>
+            <li><a href="./iptv-abonnement">Abonnement</a></li>
+            <li><a href="./iptv-propos-abonnement">À propos de l'abonnement</a></li>
+            <!-- Dropdown -->
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Services</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="./iptv-amazon-dispositifs">Acheter un appareil IPTV</a>
+                <a class="dropdown-item" href="./iptv-configurations">Configurations</a>
+                <a class="dropdown-item" href="./iptv-chaines">Chaines TV</a>
+              </div>
+            </li>
+            <li><a href="./iptv-nous-joindre">Nous-joindre</a></li>
+          {% endif %}
+
+          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+          {% for my_page in pages %}
+            {% if my_page.lang != page.lang %}
+              <li><a lang="{{ my_page.lang }}" hreflang="{{ my_page.lang }}" href="{{ my_page.url | prepend: '..' }}">{{ site.Language[my_page.lang] }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+
 
         </ul>
       </div>

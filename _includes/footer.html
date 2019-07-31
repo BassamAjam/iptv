@@ -3,12 +3,20 @@
     <div class="row">
       <div class="col-lg-4  col-md-12">
         <div class="single-footer-widget">
-          <h6>Contact</h6>
+          {% if page.lang == "en" %}
+            <h6>Contact</h6>
+          {% else %}
+            <h6>Nous-joindre</h6>
+          {% endif %}
           <ul class="footer-nav">
             <li>samtelecom001@gmail.com</li>
             <li>+1 (514) 621-4418</li>
             <li>Montreal Canada</li>
-            <li><a href="./iptv-contact-us" target="_blank">Contact Us Form</a></li>
+            {% if page.lang == "en" %}
+              <li><a href="./iptv-contact-us" target="_blank">Contact Us Form</a></li>
+            {% else %}
+              <li><a href="./iptv-nous-joindre" target="_blank">Formulaire de contact</a></li>
+            {% endif %}
             <li><a href="https://m.me/SamTelecomIPTV" target="_blank">Facebook Messenger</a></li>
           </ul>
         </div>
@@ -17,10 +25,18 @@
         <div class="single-footer-widget">
           <h6>Services</h6>
           <ul class="footer-nav">
-            <li><a href="./iptv-amazon-devices">Amazon IPTV Devices</a></li>
-            <li><a href="./iptv-configurations">Devices Configurations</a></li>
-            <li><a href="./iptv-channels">Channels list</a></li>
-            <li><a href="./iptv-about-subscription">E-transfer interac</a></li>
+            {% if page.lang == "en" %}
+              <li><a href="./iptv-amazon-devices">Amazon IPTV Devices</a></li>
+              <li><a href="./iptv-configurations">Devices Configurations</a></li>
+              <li><a href="./iptv-channels">Channels list</a></li>
+              <li><a href="./iptv-about-subscription">E-transfer interac</a></li>
+            {% else %}
+              <li><a href="./iptv-amazon-dispositifs">Acheter un appareil IPTV</a></li>
+              <li><a href="./iptv-configurations">Configurations</a></li>
+              <li><a href="./iptv-chaines">Chaines TV</a></li>
+              <li><a href="./iptv-propos-abonnement">Virement e-Interac</a></li>
+            {% endif %}
+
           </ul>
         </div>
       </div>

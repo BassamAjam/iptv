@@ -2,9 +2,12 @@
 include: ["_pages"]
 
 # General Translations
-language:
+Language:
   en: En
   fr: Fr
+Home:
+  en: Home
+  fr: Acceuil
 Contact:
   en: Contact Us
   fr: Nous-joindre
@@ -20,9 +23,7 @@ ChannelList:
 Tutorials:
   en: Tutorials
   fr: Tutoriels
-Home:
-  en: Home
-  fr: Acceuil
+
 Email:
   en: Email
   fr: Courriel
