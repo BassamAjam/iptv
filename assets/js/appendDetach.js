@@ -10,7 +10,7 @@ var macAddressMag = `<h3 class="mb-10">MAC Address</h3>
                          placeholder="Always started with 00 : 1A : 79 : xx : yy : zz" onfocus="this.placeholder = ''"
                          onblur="this.placeholder = 'Always started with 00 : 1A : 79 : xx : yy : zz'" class="single-input">
                      </div>`;
-var macAddressTV = `<h3 class="mb-10">MAC Address</h3>
+var macAddressTV = `<h3 class="mb-10 mt-10">MAC Address</h3>
                     <div data-for="macAddress">
                       <label for="macAddress"></label>
                       <input type="text" name="macAddress" data-form-field="MAC Address"
@@ -26,10 +26,7 @@ $(document).ready(function(){
       detachAll();
       $('#mac-m3u').append(`
         <div class="macAddress-app">
-          <p>
-            <a href="./iptv-configurations" target="_blank">Get "OTT IPTV STB" application</a>.<br>
-            If you have the MAC Address of the application, add it now.
-          </p>
+          </p><a href="./iptv-configurations" target="_blank">Download OTT IPTV STB application</a> on your IPTV device and <strong>get a MAC address</strong>.</p>
           ${macAddressMag}
         </div>
       `);
