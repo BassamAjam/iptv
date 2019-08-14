@@ -9,11 +9,13 @@
         </div>
       </div>
     </div>
-    <div data-form-type="formoid">
-      <form class="form-area" id="myForm" action="https://samtelecom.ca/" method="POST"
-        class="contact-form text-right" data-form-title="nasser ajam">
-        <input type="hidden" name="email" data-form-email="true"
-          value="TfbhKf9UW/siCyEtIJlFXhzE1sVWKnzkSb2564QemM5L+SZCq3LJ6WvjQyTE/g/7U3l9/Pkul3/oVCzY86IJ6Z2YYIMQUPdpYvKjJMf4Cuf3kBTCTpvK5EC2E0rMBalR">
+
+    <div>
+      <!-- <form class="form-area" id="myForm" action="https://samtelecom.ca/" method="POST"
+        class="contact-form text-right" data-form-title="nasser ajam"> -->
+        <form class="form-area contact-form text-right" action="https://formspree.io/samtelecom001@gmail.com" method="POST">
+          <!-- <input type="hidden" name="email" data-form-email="true"
+          value="GjZVfhlONJpMUIkwDGqbmVSv3ibE50zxzZDCiB8qFrTQIwg8KKScWkTnPONFOIg4fzR5sUc0nPuETIXG1gWrwo1agsour7PlU4JJsiheYcpNpL5eU5I2beJIombbtqqQ"> -->
         <div class="row">
           <div class="col-lg-12 form-group">
             <div hidden="hidden" data-form-alert="" class="alert alert-success">Form submitted successfully.
@@ -24,27 +26,27 @@
         <div class="row">
           <div class="col-lg-6 form-group">
 
-            <div data-for="firstName">
-              <input id="customerName" name="firstName" data-form-field="First Name" placeholder="Enter your name"
+            <div>
+              <input id="customerName" name="firstName" placeholder="Enter your name"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
                 class="common-input mb-20 form-control" required="" type="text">
             </div>
 
-            <div data-for="email">
-              <input name="email" data-form-field="Email" placeholder="Enter email address"
+            <div>
+              <input name="email" placeholder="Enter email address"
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required=""
                 type="email">
             </div>
 
-            <div data-for="subject">
-              <input name="subject" data-form-field="Subject" placeholder="Enter your subject"
+            <div>
+              <input name="subject" placeholder="Enter your subject"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'"
                 class="common-input mb-20 form-control" required="" type="text">
             </div>
           </div>
-          <div class="col-lg-6 form-group" data-for="message">
-            <textarea class="common-textarea mt-10 form-control" name="message" data-form-field="Message"
+          <div class="col-lg-6 form-group">
+            <textarea class="common-textarea mt-10 form-control" name="message"
               placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"
               required=""></textarea>
             <button class="primary-btn mt-20" type="submit">Send Message<span

@@ -1,4 +1,4 @@
-<section data-form-type="formoid">
+<section>
   <div class="whole-wrap section-gap">
     <div class="container">
       <div class="row d-flex justify-content-center">
@@ -15,38 +15,36 @@
           </div>
         </div>
       </div>
-      <form action="https://samtelecom.ca/" method="POST" data-form-title="">
+      <form action="https://formspree.io/samtelecom001@gmail.com" method="POST">
         <div class="row">
           <div class="col-lg-7 col-md-7">
             <h3 class="mb-30">Personal information</h3>
-            <input type="hidden" name="email" data-form-email="true"
-              value="TfbhKf9UW/siCyEtIJlFXhzE1sVWKnzkSb2564QemM5L+SZCq3LJ6WvjQyTE/g/7U3l9/Pkul3/oVCzY86IJ6Z2YYIMQUPdpYvKjJMf4Cuf3kBTCTpvK5EC2E0rMBalR">
             <div class="mt-10" data-for="firstName">
-              <input id="customerName" type="text" name="firstName" data-form-field="First Name"
+              <input id="customerName" type="text" name="firstName"
                 placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'"
                 required class="single-input">
             </div>
             <div class="mt-10" data-for="lastName">
-              <input type="text" name="lastName" data-form-field="Last Name" placeholder="Last Name"
+              <input type="text" name="lastName" placeholder="Last Name"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
             </div>
             <div class="mt-10" data-for="emailAddress">
-              <input type="email" name="emailAddress" data-form-field="Email address" placeholder="Email address"
+              <input type="email" name="emailAddress" placeholder="Email address"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
                 class="single-input">
             </div>
             <div class="mt-10" data-for="phone">
-              <input type="text" name="phone" data-form-field="Phone" placeholder="Phone"
+              <input type="text" name="phone" placeholder="Phone"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" class="single-input">
             </div>
             <div class="mt-10" data-for="city">
-              <input type="text" name="city" data-form-field="City" placeholder="City" onfocus="this.placeholder = ''"
+              <input type="text" name="city" placeholder="City" onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'City'" required class="single-input">
             </div>
             <div class="input-group-icon mt-10 mb-30">
               <div class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
               <div class="form-select" id="default-select" data-for="preferredLanguage">
-                <select data-form-field="Preferred Language">
+                <select name="language">
                   <option value="">preferred communication language</option>
                   <option value="English">English</option>
                   <option value="French">French</option>
@@ -56,7 +54,7 @@
             <div class="input-group-icon mt-10 mb-30">
               <div class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
               <div class="form-select" id="default-select" data-for="hearAboutUs">
-                <select class="hearAboutUs" data-form-field="Hear-About-Us">
+                <select class="hearAboutUs" name="Hear-About-Us">
                   <option value="">How did you hear about us?</option>
                   <option value="Friends">Friends</option>
                   <option value="Kijiji">Kijiji</option>
@@ -68,11 +66,11 @@
             </div>
             <!-- <div class="Hear-About-Us-Other">
               <div data-for="hearAboutUsOther">
-                <input type="text" name="Hear-About-Us-Other" data-form-field="Hear-About-Us-Other" class="single-input">
+                <input type="text" name="Hear-About-Us-Other" ="Hear-About-Us-Other" class="single-input">
               </div>
             </div> -->
             <div class="mt-10" data-for="message">
-              <textarea class="single-textarea" data-form-field="Message" placeholder="Message"
+              <textarea class="single-textarea" placeholder="Message"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea>
             </div>
           </div>
@@ -81,7 +79,7 @@
             <div class="single-element-widget">
               <h3 class="mb-30">Subscription Period</h3>
               <div class="default-select" id="default-select" data-for="subscriptionPeriod">
-                <select data-form-field="Subscription Period">
+                <select name="Subscription Period">
                   <option value="24 Hours">24 Hours (Free Test)</option>
                   <option value="3 months">3 months</option>
                   <option value="6 months">6 months</option>
@@ -93,7 +91,7 @@
             <div class="single-element-widget mt-30">
               <h3 class="mb-30">Device <span style="color: red; font-size:12px"> (Obligatory)</span></h3>
               <div class="default-select" id="default-select" data-for="device">
-                <select class="device" data-form-field="Device">
+                <select class="device" name="Device">
                   <option value="">Choose a device..</option>
                   {% for device in site.data.Devices.Types %}
                     <option value="{{ device }}"> {{ device }}</option>
@@ -107,7 +105,7 @@
                 style="color : black; " class="fa fa-info-circle" title="About payment method"></i></a></span></h3>
               <div class="input-group-icon mt-10 mb-30">
                 <div class="default-select" id="default-select" data-for="paymentMethod">
-                  <select data-form-field="Payment Method">
+                  <select name="Payment Method">
                     <option value="">Choose a method..</option>
                     <option value="Interac e-Transfer">Interac e-Transfer</option>
                     <option value="PayPayl">PayPal</option>
